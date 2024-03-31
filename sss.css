@@ -207,6 +207,45 @@ margin: 40px 0px;
     row-gap: 20px;
     padding: 70px 100px;
 }
+.iconka{
+    animation: katta 2s infinite;
+}
+@keyframes katta{
+    100%{
+        transform: scale(1.2);
+    }
+}
+.fa-mobile{
+    animation: aylan 2s linear infinite;
+}
+@keyframes aylan{
+    100%{
+        transform: rotateY(360deg);
+    }
+}
+.fa-envelope{
+    animation: buril 2s infinite;
+}
+@keyframes buril{
+    0%{
+        transform: rotate(-45deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.fa-location-dot{
+    animation: tepa 2s infinite;
+    font-size: 23px;
+}
+@keyframes tepa{
+    50%{
+        transform: translateY(10px);
+    }
+    100%{
+        transform: translateY(10px) rotateY(360deg);   
+    }
+}
 .pic7{
     width: 23%;
     padding: 30px 40px;
@@ -399,6 +438,32 @@ i{
     padding: 70px 140px;
     background-color: #252B42;
 }
+.q1{
+    animation: oy 2s infinite;
+    position: relative;
+}
+@keyframes oy{
+    
+    100%{
+        transform:rotateY(-360deg);
+    }
+}
+.q1::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 3px;
+    left: 0;
+    top: 100%;
+    background-color: #2091F9;
+    transform: translateY(10px);
+    transition: 0.4s all linear ;
+  opacity: 0;
+}
+.q1:hover::after{
+    transform: translateY(0px);  
+  opacity: 1;
+}
 .liop{
     width: 23%;
     padding: 20px 30px;
@@ -428,6 +493,59 @@ i{
     width: auto;
     margin-right: 20px;
     color: #FFFFFF;
+}
+.iconka{
+    margin-right: 30px;
+}
+.btn1{
+    position: relative;
+    z-index: 4;
+}
+.btn2{
+    position: relative;
+    z-index: 1;
+    overflow: hidden;   
+}
+.btn2::before{
+    position: absolute;
+    content: '';
+    width: 150%;
+    height: 150%;
+    left: 0;
+    top: 0;
+z-index: -1;
+ transform-origin: center;
+    transform: translate(-50%,-50%);
+    border: 2px solid #2091F9;
+    background-color: #252B42;
+    transition: 0.4s;
+    transform: rotate(0deg);
+    animation: aa 2s linear infinite;
+ transform: translateY(-70%);
+  
+}
+@keyframes aa{
+    
+    100%{
+        height: 250%;
+        width: 250%;
+        transform: rotateY(360deg);
+    }
+}
+.btn1::after{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 0;
+    left: 0;
+    top: 0;
+    background-color: #252B42;
+    z-index: -1;
+    border-radius: 40px;
+    transition: 0.4s;
+}
+.btn1:hover::after{
+    height: 100%;
 }
 @media(max-width:1200px){
     .header{
@@ -654,5 +772,25 @@ i{
     .xz{
         display: flex;
         justify-content: center;
+    }
+}
+@media(max-width:400px){
+    .div-1{
+        width: 100%;
+    }
+    .form2{
+        border-radius: 10px;
+    }
+    .inp2 , .inp1{
+border-radius: 6px;
+    }
+.btn1, .btn1::after{
+    border-radius: 20px;   
+}
+    .aaaq{
+        margin-bottom: 100px;
+    }
+    .max{
+        clip-path: polygon(30% 0%, 70% 0%, 100% 0, 100% 86%, 50% 100%, 50% 100%, 0 86%, 0 0);
     }
 }
